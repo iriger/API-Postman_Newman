@@ -38,8 +38,17 @@ jobs:
 
 
       # Upload the contents of Test Results directory to workspace
-      - name: Output the run Details
-        uses: actions/upload-artifact@v4
+      # - name: Output the run Details
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: RunReports
+      #     path: testResults
+
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: RunReports
-          path: testResults
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./testResults
+          publish_branch: gh-pages
+          force_orphan: true
+
