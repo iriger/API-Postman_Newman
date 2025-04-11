@@ -28,7 +28,7 @@ jobs:
 
       # Make directory to upload the test results
       - name: Make Directory for results
-        run: mkdir -p testResults
+        run: mkdir -p public/testResults
 
 
       # Run the POSTMAN collection
@@ -49,7 +49,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./testResults
+          publish_dir: ./public/testResults
           publish_branch: gh-pages
           force_orphan: true
 
