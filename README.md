@@ -26,7 +26,7 @@ Setup Instructions
 This part demonstrates continuous integration testing with automated reports.
 #### Viewing Test Reports
 The Newman test reports are automatically generated and published to GitHub Pages with each push to the main branch.
-- View the latest test report: https://github.com/iriger/API-Postman_Newman
+- View the latest test report: iriger.github.io/API-Postman_Newman/
 #### Running Tests Locally with Newman
 You can also run the Newman tests locally:
 1. Install Newman  (if not already installed):
